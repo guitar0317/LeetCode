@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+//Two point method is used order array
 vector<int> TwoSum(vector<int> &nums, int target){
     int left=0, right = nums.size()-1;
         vector<int> result;
