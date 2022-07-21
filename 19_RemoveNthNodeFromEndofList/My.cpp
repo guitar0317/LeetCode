@@ -11,20 +11,24 @@ using namespace std;
   };
 
 ListNode*  removeNthFromEnd(ListNode* head, int n) {
-        ListNode* fast =head;
-        ListNode* slow = head;
-        for(int i=0; i < n ;i++){
-            fast = fast->next;
+        int size=0;
+        ListNode* temp = head;
+        ListNode* temp2 = head;
+        while(temp!=NULL){
+            size++;
+            temp=temp->next;
         }
         
-        if(fast==NULL) return head->next;
-        
-        while(fast->next != NULL){
-            fast= fast->next;
-            slow = slow->next;
+        if(size < n) return NULL;
+        int removeIndex = size-n;
+        for(int i=1; i <= size; i++){
+            if(temp2==NULL) break;
+            if(i==removeIndex){
+                temp2->next = temp2->next->next;
+            }
+            else temp2 = temp2->next;
         }
         
-        slow->next = slow->next->next;
         return head;
 }
 
@@ -32,7 +36,7 @@ ListNode*  removeNthFromEnd(ListNode* head, int n) {
 int main(){
     int n =2;
     ListNode* head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-    
+
     removeNthFromEnd(head,n);
     while(head!=NULL){
         cout << head->val <<endl;

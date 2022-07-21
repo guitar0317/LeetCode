@@ -11,7 +11,8 @@
         "vector": "cpp",
         "unordered_map": "cpp",
         "*.tcc": "cpp",
-        "hash_map": "cpp"
+        "hash_map": "cpp",
+        "ostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
