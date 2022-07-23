@@ -47,5 +47,7 @@ int main(){
     ListNode* c = new ListNode(2, new ListNode(6));
     vector<ListNode*> list = {a,b,c};
     mergeKLists(list);
+    cout<"====================="<<endl;
+    
 
 }
