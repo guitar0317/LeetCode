@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//TC: O(n), SC: O(n)
 //Definition for a binary tree node.
   struct TreeNode {
       int val;
