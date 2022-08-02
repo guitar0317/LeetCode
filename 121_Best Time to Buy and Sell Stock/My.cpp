@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include <vector>
-//O(n^2), too time consuming
+//TC:O(n^2), too time consuming, SC: O(1)
 int main(){
     vector<int> prices={1,2};
 
