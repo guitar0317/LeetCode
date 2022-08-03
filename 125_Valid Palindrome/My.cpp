@@ -4,14 +4,13 @@ using namespace std;
 int main(){
     //string s = "A man, a plan, a canal: Panama";
     //string s = "race a car";
-    //string s = "a.";
-    string s = "0P";
+    string s = "a.";
+    //string s = "0P";
 
     string s1;
     for(auto c : s){
-        c = (char)tolower(c);
-        if((int)c>96 && (int)c<123)
-            s1+= c;
+        if(isalnum((char)c))
+            s1+= (char)tolower(c);
     }
 
     int l=0, r=s1.size()-1;
