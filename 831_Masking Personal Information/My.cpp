@@ -15,7 +15,6 @@ public:
             for(char c : s){
                 if(isdigit(c)) sTemp+=c;
             }
-
             return ((sTemp.size() == 13 ? "+***-" : sTemp.size() == 12 ? "+**-" : sTemp.size() == 11 ? "+*-" : "") + ("***-***-" + sTemp.substr(sTemp.size()-4)));
         }
     }
