@@ -28,5 +28,5 @@ void dfs(vector<vector<int> >& mat, vector<vector<bool> >& visited, int i, int j
 
 int main(){
     vector<int> mat = {{1,2,2,3,5},{3,2,3,4,4},{2,4,5,3,1},{6,7,1,4,5},{5,1,1,2,4}};
-    vector<vector<int>> pacificAtlantic(mat);
+    vector<vector<int>> v = pacificAtlantic(mat);
 }
