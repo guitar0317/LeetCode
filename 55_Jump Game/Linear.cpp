@@ -23,6 +23,21 @@ public:
         }
         return false;
         }
+
+    bool canJump3(vector<int>& nums){
+        int dis=0, size=nums.size();
+        for(int i=0; i<size; i++)
+        {
+            if(i>dis)
+                return false;
+            if(dis>size)
+                return true;
+            
+            dis = max(dis, i+nums[i]);
+        }
+
+        return true;
+    }
 };
 
 int main(){
@@ -33,5 +48,7 @@ int main(){
     string result = s.canJump(n) ? "True":"False";
     cout<<result<<endl;
     result = s.canJump2(n) ? "True":"False";
-     cout<<result;
+    cout<<result<<endl;
+    result = s.canJump3(n) ? "True":"False";
+    cout<<result<<endl;
 }
